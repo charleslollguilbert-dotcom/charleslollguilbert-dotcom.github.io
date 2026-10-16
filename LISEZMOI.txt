@@ -1,0 +1,57 @@
+SITE LUMEATEC - FICHIERS DU SITE
+================================
+
+Ce dossier contient le site complet : des pages HTML et un dossier "assets"
+(styles, images, assistant). Il n'y a rien a installer ni a compiler.
+
+
+POUR METTRE LE SITE EN LIGNE SUR LUMEATEC.COM (Netlify)
+-------------------------------------------------------
+Le site actuel est heberge chez Netlify. Pour le remplacer en gardant
+l'adresse lumeatec.com :
+
+1. Aller sur https://app.netlify.com et ouvrir le site "lumeatec".
+2. Onglet "Deploys".
+3. Faire glisser CE DOSSIER (decompresse) dans la zone
+   "Drag and drop your site output folder here".
+4. Attendre une minute : lumeatec.com affiche la nouvelle version.
+
+Rien d'autre a configurer : les adresses sans extension (/coaching,
+/training, /contact...) fonctionnent nativement chez Netlify.
+
+Pour revenir en arriere a tout moment : onglet "Deploys", choisir la
+version precedente, bouton "Publish deploy".
+
+
+POUR VOIR LE SITE AVANT DE LE METTRE EN LIGNE
+----------------------------------------------
+Aller sur https://app.netlify.com/drop et y faire glisser le dossier.
+Netlify cree une adresse de test temporaire, sans toucher a lumeatec.com.
+
+
+FORMULAIRE DE CONTACT
+---------------------
+Le formulaire de la page Contact envoie les messages a info@lumeatec.com
+via le service formsubmit.co (celui deja utilise sur l'ancien site).
+Au tout premier envoi depuis la nouvelle adresse, formsubmit envoie un
+e-mail de confirmation a info@lumeatec.com : il faut cliquer sur le lien
+qu'il contient, une seule fois, pour activer la reception.
+
+
+CE QUE CONTIENT LE DOSSIER
+--------------------------
+index.html ............... page d'accueil
+coaching*.html ........... Executive Coaching (+ 3 sous-pages)
+training*.html ........... Training (+ 3 sous-pages)
+ai*.html ................. AI Consulting (+ 4 sous-pages)
+about.html, contact.html . A propos, Contact
+terms / privacy /
+policies.html ............ pages legales (a completer)
+assets/ .................. styles, images, logos, assistant
+serve.py ................. optionnel : apercu local (python3 serve.py)
+
+
+A COMPLETER PLUS TARD
+---------------------
+Les trois pages legales (Terms of use, Privacy policy, Other policies)
+sont en place dans le pied de page mais leur texte reste a rediger.
