@@ -20,5 +20,5 @@ class Handler(SimpleHTTPRequestHandler):
 
 if __name__ == '__main__':
     port = int(sys.argv[1]) if len(sys.argv) > 1 else 8000
-    print(f'Lumeatec -> http://localhost:{port}')
+    print(f'Lumaitec -> http://localhost:{port}')
     ThreadingHTTPServer(('', port), Handler).serve_forever()

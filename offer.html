@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Choose your format - Lumaitec</title><meta name="description" content="Choose the format that fits your group: Solo, Teams, Group or Enterprise.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css?v=10">
+</head><body class=""><nav><a class='brand' href='/'><img class="logo-img" src="assets/logo.jpg?v=10" alt="Lumaitec"></a><ul class="nav-links"><li class="nav-item"><a href='/coaching'>Executive Coaching <svg class="caret" viewBox="0 0 10 10" fill="none"><path d="M2 4l3 3 3-3" stroke="currentColor" stroke-width="1.4"/></svg></a>
+        <div class="dropdown" data-label="Executive Coaching"><a href='/coaching'><span class="d-title">Overview</span><span class="d-sub">The practice</span></a><a href='/coaching-one-to-one'><span class="d-title">One-to-one coaching</span><span class="d-sub">Senior leaders</span></a><a href='/coaching-transitions'><span class="d-title">Leadership transitions</span><span class="d-sub">First 100 days</span></a><a href='/coaching-teams'><span class="d-title">Coaching the top team</span><span class="d-sub">CODIR / ExCo</span></a></div></li><li class="nav-item"><a href='/training'>Training <svg class="caret" viewBox="0 0 10 10" fill="none"><path d="M2 4l3 3 3-3" stroke="currentColor" stroke-width="1.4"/></svg></a>
+        <div class="dropdown" data-label="Training"><a href='/training'><span class="d-title">Overview</span><span class="d-sub">Workshops & labs</span></a><a href='/training-cohesion'><span class="d-title">Team cohesion</span><span class="d-sub">Lencioni - 5 Dysfunctions</span></a><a href='/training-working-genius'><span class="d-title">Working Genius</span><span class="d-sub">Roles & energy</span></a><a href='/training-assessments'><span class="d-title">Assessments</span><span class="d-sub">Birkman - KF4D - HBDI</span></a></div></li><li class="nav-item"><a href='/ai'>AI Consulting <svg class="caret" viewBox="0 0 10 10" fill="none"><path d="M2 4l3 3 3-3" stroke="currentColor" stroke-width="1.4"/></svg></a>
+        <div class="dropdown" data-label="AI Consulting"><a href='/ai'><span class="d-title">Overview</span><span class="d-sub">AI + expert decisions</span></a><a href='/ai-tool-d'><span class="d-title">Tool-D</span><span class="d-sub">Vendor selection platform</span></a><a href='/ai-cracken'><span class="d-title">crAcken</span><span class="d-sub">CRA compliance SaaS</span></a><a href='/ai-due-diligence'><span class="d-title">Tech due-diligence</span><span class="d-sub">For investors & boards</span></a><a href='/ai-advisory'><span class="d-title">Decision advisory</span><span class="d-sub">Scope a hard call</span></a></div></li><li class="nav-item"><a href='/diagnostic'>Diagnostic</a></li><li class="nav-item"><a href='/products'>Products <svg class="caret" viewBox="0 0 10 10" fill="none"><path d="M2 4l3 3 3-3" stroke="currentColor" stroke-width="1.4"/></svg></a>
+        <div class="dropdown" data-label="Products"><a href='/products#consulting'><span class="d-title">Consulting</span><span class="d-sub">Workshops, labs &amp; assessments</span></a><a href='/products#software'><span class="d-title">Software</span><span class="d-sub">Tool-D &amp; crAcken &middot; monthly plans</span></a></div></li><li class="nav-item"><a href='/about'>About</a></li></ul><div class="nav-right"><a class='nav-cta' href='/contact'>Get in touch</a></div><button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button></nav><section class="pricing-hero">
+  <div class="ph-brand"><a href='/products'>Pricing</a></div>
+  <h1 id="of-title">Choose your format</h1>
+  <p class="ph-sub" id="of-sub"></p>
+</section>
+
+<section class="pricing-panels">
+  <div class="pcards pcards-4" id="of-cards"></div>
+  <p class="pricing-note" id="of-note"></p>
+</section>
+
+<script>
+/* =======================================================================
+   LES QUATRE FORMULES, PAR PRODUIT.
+   Chaque formule mene a l'ecran de commande, ou l'on choisit ensuite
+   entre Plus, Normal et Premium.
+   ======================================================================= */
+var OFFERS = {
+  'working-genius': {
+    label: 'Working Genius',
+    sub: 'The quickest way to see where a team gains energy and where it stalls. Pick the format that matches who is in the room.',
+    note: 'Every format is delivered by Jacques Cesbron. Prices exclude VAT. Travel billed separately for on-site delivery.',
+    variants: [
+      { id:'solo',  name:'Solo',  sub:'One person',
+        desc:'Your own Working Genius, read and explained to you.',
+        feats:['Individual Working Genius assessment','60-minute one-to-one debrief','Written profile, yours to keep'] },
+      { id:'teams', name:'Teams', sub:'Up to 12 people', best:true,
+        desc:'The standard half-day lab, for one team that works together.',
+        feats:['Half-day lab for up to 12 people','Assessment for every participant','Team map of energy and friction','One-page team charter'] },
+      { id:'group', name:'Group', sub:'Up to 30 people',
+        desc:'A full day for several teams, run as one room.',
+        feats:['Full day, up to 30 people','Assessment for every participant','Sub-team mapping and cross-team friction','Charter for each sub-team'] },
+      { id:'enterprise', name:'Enterprise', sub:'Multi-site',
+        desc:'Several sites, several languages, one shared language of work.',
+        feats:['Unlimited participants across sites','Sessions in English and French','Train-the-facilitator option','Rollout plan with your HR team'] }
+    ]
+  },
+  'lencioni': {
+    label: 'Lencioni',
+    sub: 'The Five Dysfunctions, worked through on your real tensions. Pick the format that matches the group you need to move.',
+    note: 'Two facilitated days in the standard formats. Group size and languages affect the final quote. Prices exclude VAT.',
+    variants: [
+      { id:'solo',  name:'Solo',  sub:'One leader',
+        desc:'For a leader who must fix a team dynamic alone.',
+        feats:['Confidential diagnostic interview','Half-day one-to-one working session','A plan you can run yourself','Follow-up call at 30 days'] },
+      { id:'teams', name:'Teams', sub:'One team', best:true,
+        desc:'The standard two-day programme, for one leadership team.',
+        feats:['Confidential interviews before the workshop','Two facilitated days on trust and accountability','Behavioural markers agreed by the team','90-day checkpoint session'] },
+      { id:'group', name:'Group', sub:'Several teams',
+        desc:'When the friction sits between teams, not inside one.',
+        feats:['Interviews across every team involved','Two days plus a cross-team session','Shared markers between teams','90-day checkpoint for each team'] },
+      { id:'enterprise', name:'Enterprise', sub:'Whole organisation',
+        desc:'A common language of accountability across the company.',
+        feats:['Programme designed with your HR leadership','Multiple cohorts, multiple sites','Internal facilitators trained to continue','Quarterly review over a year'] }
+    ]
+  },
+  'birkman': {
+    label: 'Birkman',
+    sub: 'Objective language for patterns that are otherwise invisible. Pick the format that matches who you are assessing.',
+    note: 'Results belong to the person assessed and are never shared with an employer without consent.',
+    variants: [
+      { id:'solo',  name:'Solo',  sub:'One person', best:true,
+        desc:'The standard assessment, with a personal debrief.',
+        feats:['Full Birkman behavioural assessment','90-minute one-to-one debrief','Written report, yours to keep'] },
+      { id:'teams', name:'Teams', sub:'Up to 12 people',
+        desc:'Everyone assessed, then the team read together.',
+        feats:['Assessment for every participant','Individual debrief for each person','Half-day group read-out','Team map of styles and stress responses'] },
+      { id:'group', name:'Group', sub:'Up to 30 people',
+        desc:'Several teams assessed in one wave.',
+        feats:['Assessment for every participant','Individual debriefs','Full-day group read-out','Comparison across sub-teams'] },
+      { id:'enterprise', name:'Enterprise', sub:'Ongoing programme',
+        desc:'Assessment built into how you hire and develop.',
+        feats:['Unlimited assessments over twelve months','Debriefs delivered on a rolling basis','KF4D and HBDI available throughout','Internal debriefer certification option'] }
+    ]
+  }
+};
+
+
+
+/* --- PRIX DE DEPART PAR FORMULE -----------------------------------------
+   Le "From" de la page Pricing correspond a la formule Solo, la moins chere.
+   0 = tarif non defini : la carte affiche "On request".
+   ------------------------------------------------------------------------ */
+var OFFER_PRICES = {
+  'working-genius': { solo:2000, teams:0, group:0, enterprise:0 },
+  'lencioni':       { solo:5000, teams:0, group:0, enterprise:0 },
+  'birkman':        { solo:3000, teams:0, group:0, enterprise:0 }
+};
+
+(function(){
+  var key = new URLSearchParams(location.search).get('p') || 'working-genius';
+  var o = OFFERS[key] || OFFERS['working-genius'];
+  document.title = o.label + ' - Lumaitec';
+  document.getElementById('of-title').textContent = o.label;
+  document.getElementById('of-sub').textContent = o.sub;
+  document.getElementById('of-note').textContent = o.note;
+  var table = OFFER_PRICES[key] || {};
+  document.getElementById('of-cards').innerHTML = o.variants.map(function(v){
+    var price = table[v.id] || 0;
+    var amount = price
+      ? '\u20ac\u00a0' + price.toLocaleString('fr-FR')
+      : '<span class="price-tbd">prix</span>';
+    var priceHTML = '<span class="pc-from">From</span>' + amount + '<span class="pc-per">excl. VAT</span>';
+    var href  = price ? '/checkout?p=' + key + '&v=' + v.id : '/contact';
+    var label = 'Choose this format';
+    return '<div class="pcard">' +
+      '<div class="pc-name">' + o.label + ' ' + v.name + '<span class="pc-sub">' + v.sub + '</span></div>' +
+      '<p class="pc-tag">' + v.desc + '</p>' +
+      '<div class="pc-price">' + priceHTML + '</div>' +
+      '<a class="pc-btn" href="' + href + '">' + label + '<span class="pc-chev">&rsaquo;</span></a>' +
+      '<ul class="pc-feat">' + v.feats.map(function(f){ return '<li>' + f + '</li>'; }).join('') + '</ul>' +
+      '</div>';
+  }).join('');
+})();
+</script>
+<footer><div class="footer-inner">
+<div class="f-brand"><img class="logo-img" src="assets/logo.jpg?v=10" alt="Lumaitec"></div>
+<div class="f-tag">Executive coaching, training & AI consulting - boutique agility, executive-room credibility. Nice - Worldwide.</div>
+<div class="footer-links">
+<a href='/coaching'>Executive Coaching</a>
+<a href='/training'>Training</a>
+<a href='/ai'>AI Consulting</a>
+<a href='/diagnostic'>Diagnostic</a>
+<a href='/products'>Products</a>
+<a href='/about'>About</a>
+<a href='/contact'>Contact</a>
+<a href="https://www.linkedin.com/in/jacques-cesbron-b174706/">LinkedIn</a>
+</div>
+<div class="f-legal">
+<div class="f-legal-title">Terms &amp; policies</div>
+<a href='/terms'>Terms of use</a>
+<a href='/privacy'>Privacy policy</a>
+<a href='/policies'>Other policies</a>
+<a href="#" onclick="if(window.lmtResetConsent){lmtResetConsent();}return false;">Cookie settings</a>
+</div></div>
+<div class="footer-bottom">
+  <div class="fb-social">
+    <a href="https://www.linkedin.com/in/jacques-cesbron-b174706/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+    <a href="mailto:contact@lumaitec.com" aria-label="Email"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+  </div>
+  <div class="fb-copy">Lumaitec &copy; 2026 <a href='/contact'>Contact</a></div>
+  <div class="fb-lang">
+    <button class="fb-lang-btn" type="button" aria-haspopup="listbox" aria-expanded="false"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span class="fb-lang-current">English</span><svg class="fb-lang-caret" width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 6l3-3 3 3" stroke="currentColor" stroke-width="1.4"/></svg></button>
+    <ul class="fb-lang-menu" role="listbox">
+      <li role="option" data-lang="en" class="active">English</li>
+      <li role="option" data-lang="fr">Français</li>
+      <li role="option" data-lang="es">Español</li>
+      <li role="option" data-lang="de-CH">Deutsch (Schweiz)</li>
+    </ul>
+  </div>
+</div></footer><script>
+(function(){
+  var box=document.querySelector('.fb-lang'); if(!box) return;
+  var btn=box.querySelector('.fb-lang-btn'), cur=box.querySelector('.fb-lang-current');
+  btn.addEventListener('click',function(e){ e.stopPropagation(); var o=box.classList.toggle('open'); btn.setAttribute('aria-expanded',o); });
+  box.querySelectorAll('.fb-lang-menu li').forEach(function(li){
+    li.addEventListener('click',function(){
+      box.querySelectorAll('.fb-lang-menu li').forEach(function(x){ x.classList.remove('active'); });
+      li.classList.add('active'); cur.textContent=li.textContent; box.classList.remove('open'); btn.setAttribute('aria-expanded','false');
+    });
+  });
+  document.addEventListener('click',function(){ box.classList.remove('open'); btn.setAttribute('aria-expanded','false'); });
+})();
+</script>
+<script src="assets/analytics.js?v=10" defer></script>
+<script src="assets/chatbot.js?v=10"></script>
+</body></html>

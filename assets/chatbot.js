@@ -1,5 +1,5 @@
 /* ============================================================
-   LUMEATEC — AI Navigation Assistant
+   LUMAITEC — AI Navigation Assistant
    ============================================================ */
 
 (function () {
@@ -8,7 +8,7 @@
   const KB = [
     {
       patterns: ['coaching', 'coach', 'executive', 'leader', 'codir', 'director', 'ceo', 'top team'],
-      reply: `Lumeatec executive coaching is designed for senior leaders. Jacques offers three formats:<br><br>
+      reply: `Lumaitec executive coaching is designed for senior leaders. Jacques offers three formats:<br><br>
         - <a href="coaching-one-to-one.html">One-to-one</a> — individual programme 6–12 months<br>
         - <a href="coaching-transitions.html">Leadership transitions</a> — first 100 days in a new role<br>
         - <a href="coaching-teams.html">Top team coaching</a> — CODIR / ExCo<br><br>
@@ -17,7 +17,7 @@
     },
     {
       patterns: ['training', 'workshop', 'lencioni', 'working genius', 'dysfunctions', 'team', 'cohesion'],
-      reply: `Lumeatec training transforms teams with proven frameworks:<br><br>
+      reply: `Lumaitec training transforms teams with proven frameworks:<br><br>
         - <a href="training-cohesion.html">Team cohesion</a> — Lencioni · 5 Dysfunctions<br>
         - <a href="training-working-genius.html">Working Genius</a> — Roles & energy<br>
         - <a href="training-assessments.html">Assessments</a> — Birkman · KF4D · HBDI<br><br>
@@ -35,7 +35,7 @@
     },
     {
       patterns: ['ai', 'artificial intelligence', 'tool-d', 'tool d', 'technology', 'vendor', 'due diligence', 'investment', 'decision'],
-      reply: `Lumeatec's AI Consulting practice combines deep tech expertise with frontier AI:<br><br>
+      reply: `Lumaitec's AI Consulting practice combines deep tech expertise with frontier AI:<br><br>
         - <a href="ai-tool-d.html">Tool-D</a> — Vendor selection platform<br>
         - <a href="ai-cracken.html">crAcken</a> — CRA compliance SaaS<br>
         - <a href="ai-due-diligence.html">Tech due-diligence</a> — For investors & boards<br>
@@ -45,7 +45,7 @@
     },
     {
       patterns: ['cracken', 'cra ', 'cyber resilience', 'sbom', 'vulnerability', 'compliance', 'flight recorder'],
-      reply: `<strong>crAcken</strong> is Lumeatec's CRA compliance SaaS — the flight recorder for connected products.<br><br>
+      reply: `<strong>crAcken</strong> is Lumaitec's CRA compliance SaaS — the flight recorder for connected products.<br><br>
         It turns SBOMs, vulnerability findings and security decisions into one traceable release workflow: deterministic analysis, release monitoring, 24h/72h reporting cases and a defensible evidence bundle.<br><br>
         The CRA reporting clock starts <strong>11 September 2026</strong>.<br><br>
         <a href="ai-cracken.html">Discover crAcken -></a>`,
@@ -53,21 +53,21 @@
     },
     {
       patterns: ['tool-d', 'vendor', 'selection', 'platform'],
-      reply: `<strong>Tool-D</strong> is Lumeatec's proprietary platform for technology vendor selection.<br><br>
+      reply: `<strong>Tool-D</strong> is Lumaitec's proprietary platform for technology vendor selection.<br><br>
         It combines frontier AI and a curated network of senior technologists to structure and clarify tech procurement decisions.<br><br>
         <a href="ai-tool-d.html">Discover Tool-D -></a>`,
       quick: ['Get in touch', 'AI Consulting']
     },
     {
       patterns: ['price', 'pricing', 'cost', 'fee', 'quote', 'rate'],
-      reply: `Lumeatec's fees are tailored to the scope, duration and format of each engagement.<br><br>
+      reply: `Lumaitec's fees are tailored to the scope, duration and format of each engagement.<br><br>
         The best starting point: <strong>30 minutes, no agenda, no commitment</strong> — we'll work out together what fits your situation.<br><br>
         <a href="contact.html">Get in touch -></a>`,
       quick: ['Get in touch', 'Coaching', 'Training']
     },
     {
       patterns: ['jacques', 'cesbron', 'founder', 'background', 'experience', 'intel', 'altera', 'silicon valley', 'insead', 'who are'],
-      reply: `<strong>Jacques Cesbron</strong> is the founder of Lumeatec.<br><br>
+      reply: `<strong>Jacques Cesbron</strong> is the founder of Lumaitec.<br><br>
         - INSEAD-informed · Birkman Certified · Lencioni Certified<br>
         - 25 years at Intel & Altera (Silicon Valley)<br>
         - 300 workshops · 1,000 people trained<br><br>
@@ -77,14 +77,14 @@
     {
       patterns: ['contact', 'meeting', 'call', 'email', 'phone', 'talk', 'intro', 'appointment'],
       reply: `To start a conversation with Jacques:<br><br>
-        - <a href="mailto:info@lumeatec.com">info@lumeatec.com</a><br>
+        - <a href="mailto:contact@lumaitec.com">contact@lumaitec.com</a><br>
         - <a href="https://www.linkedin.com/in/jacques-cesbron-b174706/">LinkedIn</a><br><br>
         Or use the <a href="contact.html">contact form</a> for an initial exchange. <strong>30 minutes, no agenda, no commitment.</strong>`,
       quick: ['Contact form', 'Coaching', 'Training']
     },
     {
       patterns: ['nice', 'france', 'location', 'where', 'remote', 'video', 'online', 'in-person'],
-      reply: `Lumeatec is based in <strong>Nice</strong>, France — and works worldwide, both in person and by video.<br><br>
+      reply: `Lumaitec is based in <strong>Nice</strong>, France — and works worldwide, both in person and by video.<br><br>
         Jacques has worked across <strong>3 continents</strong> and operates fluently in English and French.`,
       quick: ['Get in touch', 'About Jacques']
     }
@@ -97,7 +97,7 @@
     - <a href="about.html">About Jacques</a><br>
     - <a href="contact.html">Get in touch</a>`;
 
-  const WELCOME = `Hello! I'm the Lumeatec assistant. I'll help you find the right service for your situation.<br><br>
+  const WELCOME = `Hello! I'm the Lumaitec assistant. I'll help you find the right service for your situation.<br><br>
     What are you looking for?`;
 
   const QUICK_ACTIONS = {
@@ -186,14 +186,14 @@
   }
 
   function buildWidget() {
-    const btn = createEl('button', { id: 'lmt-chat-btn', 'aria-label': 'Open Lumeatec assistant' });
-    btn.innerHTML = `<img class="chat-icon" src="assets/ring-icon.png" alt="">Lumeatec Assistant`;
+    const btn = createEl('button', { id: 'lmt-chat-btn', 'aria-label': 'Open Lumaitec assistant' });
+    btn.innerHTML = `<img class="chat-icon" src="assets/ring-icon.png" alt="">Lumaitec Assistant`;
 
-    const panel = createEl('div', { id: 'lmt-chat-panel', role: 'dialog', 'aria-label': 'Lumeatec Assistant' });
+    const panel = createEl('div', { id: 'lmt-chat-panel', role: 'dialog', 'aria-label': 'Lumaitec Assistant' });
     panel.innerHTML = `
       <div id="lmt-chat-header">
         <div>
-          <div class="ch-title">Lumeatec Assistant</div>
+          <div class="ch-title">Lumaitec Assistant</div>
           <div class="ch-sub">NAVIGATION · SERVICES · CONTACT</div>
         </div>
         <button id="lmt-chat-close" aria-label="Close">✕</button>

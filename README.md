@@ -1,6 +1,6 @@
-# Lumeatec — site web
+# Lumaitec — site web
 
-Copie fidèle de https://lumeatec.com (site statique : HTML + `assets/styles.css` + `assets/chatbot.js`).
+Copie fidèle de https://lumaitec.com (site statique : HTML + `assets/styles.css` + `assets/chatbot.js`).
 
 ## Lancer en local
 
@@ -18,4 +18,4 @@ index, coaching, coaching-one-to-one, coaching-transitions, coaching-teams,
 training, training-cohesion, training-working-genius, training-assessments,
 ai, ai-tool-d, ai-cracken, ai-due-diligence, ai-advisory, about, contact.
 
-Le formulaire de contact envoie vers formsubmit.co (info@lumeatec.com). Le chatbot est 100 % côté client.
+Le formulaire de contact envoie vers formsubmit.co (info@lumaitec.com). Le chatbot est 100 % côté client.

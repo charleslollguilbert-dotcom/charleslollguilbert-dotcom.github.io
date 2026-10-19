@@ -1,20 +1,20 @@
-SITE LUMEATEC - FICHIERS DU SITE
+SITE LUMAITEC - FICHIERS DU SITE
 ================================
 
 Ce dossier contient le site complet : des pages HTML et un dossier "assets"
 (styles, images, assistant). Il n'y a rien a installer ni a compiler.
 
 
-POUR METTRE LE SITE EN LIGNE SUR LUMEATEC.COM (Netlify)
+POUR METTRE LE SITE EN LIGNE SUR LUMAITEC.COM (Netlify)
 -------------------------------------------------------
 Le site actuel est heberge chez Netlify. Pour le remplacer en gardant
-l'adresse lumeatec.com :
+l'adresse lumaitec.com :
 
-1. Aller sur https://app.netlify.com et ouvrir le site "lumeatec".
+1. Aller sur https://app.netlify.com et ouvrir le site "lumaitec".
 2. Onglet "Deploys".
 3. Faire glisser CE DOSSIER (decompresse) dans la zone
    "Drag and drop your site output folder here".
-4. Attendre une minute : lumeatec.com affiche la nouvelle version.
+4. Attendre une minute : lumaitec.com affiche la nouvelle version.
 
 Rien d'autre a configurer : les adresses sans extension (/coaching,
 /training, /contact...) fonctionnent nativement chez Netlify.
@@ -26,15 +26,15 @@ version precedente, bouton "Publish deploy".
 POUR VOIR LE SITE AVANT DE LE METTRE EN LIGNE
 ----------------------------------------------
 Aller sur https://app.netlify.com/drop et y faire glisser le dossier.
-Netlify cree une adresse de test temporaire, sans toucher a lumeatec.com.
+Netlify cree une adresse de test temporaire, sans toucher a lumaitec.com.
 
 
 FORMULAIRE DE CONTACT
 ---------------------
-Le formulaire de la page Contact envoie les messages a info@lumeatec.com
+Le formulaire de la page Contact envoie les messages a info@lumaitec.com
 via le service formsubmit.co (celui deja utilise sur l'ancien site).
 Au tout premier envoi depuis la nouvelle adresse, formsubmit envoie un
-e-mail de confirmation a info@lumeatec.com : il faut cliquer sur le lien
+e-mail de confirmation a info@lumaitec.com : il faut cliquer sur le lien
 qu'il contient, une seule fois, pour activer la reception.
 
 
